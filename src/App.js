@@ -1,9 +1,14 @@
 import './App.css';
 import CounterContainer from "./components/CounterContainer";
+import PostListContainer from "./components/PostListContainer";
 
 function App() {
     return (
-        <CounterContainer/>
+        <>
+            <CounterContainer/>
+            <hr/>
+            <PostListContainer/>
+        </>
     );
 }
 
