@@ -8,10 +8,11 @@ import rootReducer from "./modules";
 import {Provider} from "react-redux";
 import {logger} from "redux-logger/src";
 import {composeWithDevTools} from "redux-devtools-extension";
+import thunk from "redux-thunk";
 
 const store = createStore(
     rootReducer,
-    composeWithDevTools(applyMiddleware(logger))
+    composeWithDevTools(applyMiddleware(thunk, logger))
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
